@@ -1,0 +1,6 @@
+git init
+git add . 
+git commit -m ""
+git remote add add origin <URL_FROM_GITHUB_REPO>
+git remote -v
+git push		or 		git push origin master
