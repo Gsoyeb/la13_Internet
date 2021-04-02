@@ -16,7 +16,7 @@ public interface WordDao {
     @Query("delete from word_table")                        //No annotations, like @Insert for deleting multiple entities.
     void deleteAll();                                       //delete all words.
 
-@Query("select * from word_table order by word asc")        //Returns a list of word in ascending order.
+    @Query("select * from word_table order by word asc")    //Returns a list of word in ascending order.
     LiveData<List<Word>> getAlphabetizedWord();             //method that will return a list of words in order. Add LiveData to constantly get the updated Database values
 }
 
