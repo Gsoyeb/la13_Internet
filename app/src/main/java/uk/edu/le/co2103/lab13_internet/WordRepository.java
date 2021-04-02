@@ -14,10 +14,10 @@ public class WordRepository {
     WordRepository(Application application){
         WordRoomDatabase db = WordRoomDatabase.getDatabase(application);
         mWordDao = db.wordDao();
-        mAllWords = mWordDao.getAlphabetizedWord();
+        mAllWords = mWordDao.getAlphabetizedWord();     //get the alphabetized words from @Dao
     }
 
-    LiveData<List<Word>> getmAllWords(){    //Obeserved LiveData will notify the user when data is changed. Not executed in the main UI thread.
+    LiveData<List<Word>> getAllWords(){    //Obeserved LiveData will notify the user when data is changed. Not executed in the main UI thread.
         return mAllWords;
     }
 
